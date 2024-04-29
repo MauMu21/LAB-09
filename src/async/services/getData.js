@@ -1,9 +1,8 @@
 ( async () => {
 
-  const response = await fetch('https://dummyjson.com/products/1');
-  
-  const data = await response.json();
+  const id = Math.floor(Math.random() * 100) + 1;
 
-  console.log(data);
+  const response = await fetch(`https://dummyjson.com/products/${id}`);
+  const data = await response.json();
 
 })();
